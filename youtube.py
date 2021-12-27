@@ -2,7 +2,7 @@ import os, telebot
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-bot = telebot.TeleBot("5037312316:AAGlqZYKm1fsjk6bxRIQCEm0ct3x0t1xpyE")
+bot = telebot.TeleBot("token_from_tg")
 @bot.message_handler(content_types=["text"])
 def handle(message):
     if not message.text == "/start":
