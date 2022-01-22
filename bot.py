@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests, telebot
-bot = telebot.TeleBot('5037312316:AAGMy-OY9B1LAfBII6ER4hFzqjAVYs0Tg1A')
+bot = telebot.TeleBot('token')
 def search(q):
     url = f'''https://invidious.snopyta.org/search?q={'+'.join(q.split(' '))}'''
     data = requests.get(url).content.decode('utf-8')
