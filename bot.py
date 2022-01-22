@@ -16,6 +16,12 @@ def handle(message):
     if message.text == '/start':
         bot.send_message(message.from_user.id, "Welcome to Invidious Search Bot by Sovenok-Hacker!")
     else:
-        for link in search(message.text):
-            bot.send_message(message.from_user.id, link)
+        try:
+            for link in search(message.text):
+                bot.send_message(message.from_user.id, link)
+        except:
+            try:
+                bot.send_message(message.from_user.id, 'Error')
+            except:
+                pass
 bot.polling()
